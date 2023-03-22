@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --same: hsl(0, 0%, 95%);
+    --orange: hsl(31, 77%, 52%);
+    --dcyan: hsl(184, 100%, 22%);
+    --ddcyan: hsl(179, 100%, 13%);
+    --paragraph: hsla(0, 0%, 100%, 0.75);
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.main {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 10px;
+}
+
+.sedans, .suvs, .luxury {
+    padding: 4%;
+}
+
+.sedans {
+    background-color: var(--orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.suvs {
+    background-color: var(--dcyan);
+}
+
+.luxury {
+    background-color: var(--ddcyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display';
+    color: var(--same);
+}
+
+p {
+    font-family: 'Lexend Deca';
+    color: var(--paragraph);
+}
+
+button {
+    width: 70%;
+    padding: 15px;
+    border-radius: 60px;
+    font-size: 15px;
+    border: none;
+    font-family: 'Lexend Deca';
+    cursor: pointer;
+}
+
+.btn1 {
+    color: var(--orange);
+}
+
+.btn2 {
+    color: var(--dcyan);
+}
+
+.btn3 {
+    color: var(--ddcyan);
+}
+
+.btn1:hover {
+    border: 1px solid white;
+    background-color: var(--orange);
+    color: var(--same);
+}
+
+.btn2:hover {
+    border: 1px solid white;
+    background-color: var(--dcyan);
+    color: var(--same);
+}
+
+.btn3:hover {
+    border: 1px solid white;
+    background-color: var(--ddcyan);
+    color: var(--same);
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .sedans {
+        background-color: var(--orange);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .luxury {
+        background-color: var(--ddcyan);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0;
+    }
+}
